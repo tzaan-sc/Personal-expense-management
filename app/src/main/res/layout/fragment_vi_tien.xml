@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="Ví tiền"
+            android:textColor="@color/text_dark"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/btn_toggle_visibility"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_view"
+            android:tint="@color/blue_primary"/>
+    </RelativeLayout>
+
+    <!-- Summary card: Tài sản / Món nợ -->
+    <LinearLayout
+        android:id="@+id/card_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/bg_card"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tài sản"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_tai_san"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 VND"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Món nợ"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_mon_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 VND"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Account list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_accounts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card_summary"
+        android:layout_above="@android:id/empty"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="80dp"/>
+
+    <!-- FAB Add account -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="90dp"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/blue_primary"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+</RelativeLayout>

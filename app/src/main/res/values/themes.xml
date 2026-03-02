@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.ManageMoney" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+    <style name="Theme.ManageMoney" parent="Base.Theme.ManageMoney" />
+</resources>

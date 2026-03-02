@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Style cho các nút danh mục (Ăn, Giải trí...) -->
+    <style name="BtnCategory">
+        <item name="android:background">@drawable/bg_btn_category</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Style cho phím máy tính (0-9, +, -, ...) -->
+    <style name="BtnCalcKey">
+        <item name="android:background">@drawable/bg_calc_key</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quản Lý Chi Tiêu</string>
+    <string name="tab_so">Sổ</string>
+    <string name="tab_vi_tien">Ví tiền</string>
+    <string name="them">Thêm</string>
+    <string name="chi">Chi</string>
+    <string name="thu">Thu</string>
+    <string name="tong">Tổng</string>
+    <string name="chi_tiet">chi tiết</string>
+    <string name="lich">lịch</string>
+    <string name="xoa">xóa</string>
+    <string name="ghi_chu">Ghi chú</string>
+    <string name="ngay">Ngày</string>
+    <string name="the">Thẻ</string>
+    <string name="ok">ok</string>
+    <string name="tai_san">Tài sản</string>
+    <string name="mon_no">Món nợ</string>
+    <string name="tai_khoan_moi">Tài khoản mới</string>
+    <string name="loai_tai_khoan">Loại tài khoản</string>
+    <string name="ten_tai_khoan">Tên tài khoản</string>
+    <string name="so_tien">Số tiền</string>
+    <string name="chon_so">Chọn sổ</string>
+    <string name="the_tin_dung">Thẻ tín dụng</string>
+    <string name="tien_mat">Tiền mặt</string>
+</resources>

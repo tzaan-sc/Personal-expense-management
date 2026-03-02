@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top bar: X | Chi | Thu | ✓ -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_main"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/btn_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="✕"
+            android:textColor="@color/blue_primary"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_btn_category"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tab_chi"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="@string/chi"
+                android:textColor="@color/text_gray"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tab_thu"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_tab_selected"
+                android:gravity="center"
+                android:text="@string/thu"
+                android:textColor="@color/text_dark"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="✓"
+            android:textColor="@color/blue_primary"
+            android:textSize="22sp"/>
+    </RelativeLayout>
+
+    <!-- Category buttons -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+
+                <!-- Category: Ăn -->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:paddingEnd="12dp" android:paddingBottom="8dp">
+                    <LinearLayout android:layout_width="60dp" android:layout_height="60dp"
+                        android:background="@drawable/bg_btn_category" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="button" android:textColor="@color/blue_primary" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Ăn" android:textSize="12sp" android:paddingTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Category: Giải trí -->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:paddingEnd="12dp" android:paddingBottom="8dp">
+                    <LinearLayout android:layout_width="60dp" android:layout_height="60dp"
+                        android:background="@drawable/bg_btn_category" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="button" android:textColor="@color/blue_primary" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Giải trí" android:textSize="12sp" android:paddingTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Category: Quần áo -->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:paddingEnd="12dp" android:paddingBottom="8dp">
+                    <LinearLayout android:layout_width="60dp" android:layout_height="60dp"
+                        android:background="@drawable/bg_btn_category" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="button" android:textColor="@color/blue_primary" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Quần áo" android:textSize="12sp" android:paddingTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Category: Quà -->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:paddingEnd="12dp" android:paddingBottom="8dp">
+                    <LinearLayout android:layout_width="60dp" android:layout_height="60dp"
+                        android:background="@drawable/bg_btn_category" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="button" android:textColor="@color/blue_primary" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Quà" android:textSize="12sp" android:paddingTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Add category -->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:paddingBottom="8dp">
+                    <LinearLayout android:id="@+id/btn_add_category"
+                        android:layout_width="60dp" android:layout_height="60dp"
+                        android:background="@drawable/bg_btn_category" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="+" android:textColor="@color/blue_primary" android:textSize="28sp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Thêm" android:textSize="12sp" android:paddingTop="4dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Calculator panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Display row: Thẻ | Note | Amount -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/btn_the"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_calc_key"
+                android:gravity="center"
+                android:text="@string/the"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"/>
+
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+
+            <EditText
+                android:id="@+id/et_note"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_calc_key"
+                android:hint="@string/ghi_chu"
+                android:inputType="text"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/text_dark"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp"/>
+
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="4dp"
+                android:text="0"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Ngày | (empty) | OK -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/btn_ngay"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_calc_key"
+                android:gravity="center"
+                android:text="@string/ngay"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"/>
+
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/btn_ok"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_calc_key"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="@color/blue_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Calculator keys -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:columnCount="4"
+            app:rowCount="5">
+
+            <TextView android:id="@+id/btn_mul" android:text="x" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_7" android:text="7" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_8" android:text="8" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_9" android:text="9" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+
+            <TextView android:id="@+id/btn_div" android:text="/" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_4" android:text="4" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_5" android:text="5" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_6" android:text="6" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+
+            <TextView android:id="@+id/btn_add" android:text="+" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_1" android:text="1" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_2" android:text="2" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_3" android:text="3" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+
+            <TextView android:id="@+id/btn_sub" android:text="-" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_dot" android:text="." style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_0" android:text="0" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1"/>
+            <TextView android:id="@+id/btn_del" android:text="xóa" style="@style/BtnCalcKey" android:layout_width="0dp" android:layout_height="0dp" android:layout_margin="3dp" app:layout_columnWeight="1" app:layout_rowWeight="1" android:textColor="@color/color_chi"/>
+
+        </GridLayout>
+    </LinearLayout>
+
+</LinearLayout>

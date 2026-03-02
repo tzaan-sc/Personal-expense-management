@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="12dp">
+
+    <!-- Account type label -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:paddingHorizontal="4dp">
+
+        <TextView
+            android:id="@+id/tv_account_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Thẻ tín dụng"
+            android:textColor="@color/text_gray"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_debt_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Món nợ: 0 (VND)"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <!-- Account card -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_transaction_item"
+        android:paddingHorizontal="16dp">
+
+        <!-- Card icon -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:src="@android:drawable/ic_dialog_info"
+            android:tint="@color/blue_primary"
+            android:background="@drawable/bg_icon_account"
+            android:padding="8dp"/>
+
+        <!-- Account name -->
+        <TextView
+            android:id="@+id/tv_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@android:id/icon"
+            android:layout_marginStart="60dp"
+            android:text="sổ 1"
+            android:textColor="@color/text_dark"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <!-- Balance -->
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="0đ"
+            android:textColor="@color/text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+</LinearLayout>
