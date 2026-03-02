@@ -4,6 +4,15 @@
     android:layout_height="match_parent"
     android:background="@color/bg_main">
 
+    <!-- Top bar: Account icons + chi tiết -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+
     <!-- Fragment Container -->
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -11,7 +20,82 @@
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_nav"/>
 
-    <!-- Bottom Navigation -->
+        <!-- chi tiết + lịch -->
+        <LinearLayout
+            android:id="@+id/ll_chi_tiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/btn_chi_tiet"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_btn_round"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/chi_tiet"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"
+                android:layout_margin="10dp"/>
+            <View
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_below="@id/ll_chi_tiet">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingEnd="12dp"
+                android:layout_marginLeft="10dp">
+                <View
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_card"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sổ 1"
+                    android:textSize="12sp"
+                    android:paddingTop="4dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_card"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_add"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thêm"
+                    android:textSize="12sp"
+                    android:paddingTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    <!-- Điều hướng cuối trang -->
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
@@ -52,5 +136,5 @@
             android:textSize="16sp"/>
 
     </LinearLayout>
-
+    </RelativeLayout>
 </RelativeLayout>
